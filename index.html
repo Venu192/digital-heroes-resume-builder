@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Heroes Resume Builder | ATS-Friendly Resume Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-content">
+        <h1>Digital Heroes Resume Builder</h1>
+        <p>Create ATS-Friendly Professional Resumes in Seconds</p>
+    </div>
+
+    <button id="darkModeBtn">
+        🌙 Dark Mode
+    </button>
+
+</header>
+
+<div class="container">
+
+
+    <div class="form-section">
+
+        <h2>Build Your Resume</h2>
+
+        <input type="file" id="photo">
+
+        <input type="text"
+               id="name"
+               placeholder="Full Name">
+
+        <input type="email"
+               id="email"
+               placeholder="Email Address">
+
+        <input type="text"
+               id="phone"
+               placeholder="Phone Number">
+
+        <input type="text"
+               id="linkedin"
+               placeholder="LinkedIn Profile URL">
+
+        <input type="text"
+               id="college"
+               placeholder="College Name">
+
+        <input type="text"
+               id="cgpa"
+               placeholder="CGPA">
+
+        <textarea id="summary"
+                  placeholder="Professional Summary"></textarea>
+
+        <textarea id="skills"
+                  placeholder="Skills (comma separated)"></textarea>
+
+        <textarea id="education"
+                  placeholder="Education Details"></textarea>
+
+        <textarea id="projects"
+                  placeholder="Projects"></textarea>
+
+        <textarea id="certifications"
+                  placeholder="Certifications"></textarea>
+
+        <button onclick="generateResume()">
+            Generate Resume
+        </button>
+
+        <button onclick="downloadPDF()">
+            Download PDF
+        </button>
+
+    </div>
+
+    <div class="preview-section">
+
+        <div id="resume">
+
+            <div class="resume-header">
+
+                <img id="previewPhoto"
+                     src="https://via.placeholder.com/140"
+                     alt="Profile">
+
+                <h1 id="previewName">
+                    Your Name
+                </h1>
+
+                <div class="contact-info">
+
+                    <p id="previewEmail">
+                        Email
+                    </p>
+
+                    <p id="previewPhone">
+                        Phone
+                    </p>
+
+                    <p id="previewLinkedin">
+                        LinkedIn
+                    </p>
+
+                </div>
+
+            </div>
+
+            <section>
+
+                <h2>Professional Summary</h2>
+
+                <p id="previewSummary"></p>
+
+            </section>
+
+            <section>
+
+                <h2>Skills</h2>
+
+                <div id="previewSkills"></div>
+
+            </section>
+
+            <section>
+
+                <h2>Education</h2>
+
+                <p id="previewEducation"></p>
+
+            </section>
+
+            <section>
+
+                <h2>College Information</h2>
+
+                <p>
+                    <strong>College:</strong>
+                    <span id="previewCollege"></span>
+                </p>
+
+                <p>
+                    <strong>CGPA:</strong>
+                    <span id="previewCgpa"></span>
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>Projects</h2>
+
+                <p id="previewProjects"></p>
+
+            </section>
+
+            <section>
+
+                <h2>Certifications</h2>
+
+                <p id="previewCertifications"></p>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>
+        Created By:
+        <strong>Venu Muvva</strong>
+    </p>
+
+    <p>
+        venumuvva192@gmail.com
+    </p>
+
+    <a href="https://digitalheroesco.com"
+       target="_blank">
+
+        <button>
+            Built for Digital Heroes
+        </button>
+
+    </a>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
